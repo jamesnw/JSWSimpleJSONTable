@@ -25,27 +25,35 @@ Starting Out
 ============
 Import the JSWSimpleJSONTable class into your project.
 Subclass JSWSimpleJSONTable to create your delegate, and call   
-````self = [super initWithStyle:style file:fileName delegate:self];`````  
+`self = [super initWithStyle:style file:fileName delegate:self];`
 You will put your methods and view customizations on the delegate.
 
-##Keys
-###Text
+## Keys
+
+### Text
+
 ````{"text":"The title text"}````
-###Detail Text
+
+### Detail Text
 ````{"detailText":"The subtitle"}````
-###Image
+
+### Image
 
 ````{"image":"imageFileName"}````  
 This is called by ````[UIImage imagedNamed:]```` so you don't need the file extension.
-###Methods
+
+### Methods
+
 ````{"action":"methodName"}````
+
 You will need to add an action to your delegate's interface and implementation. You can't receive or return any objects. The above code will call the method ````-(void)methodName;````.
-###Accessory
+
+### Accessory
 ````{"accessory":"UITableViewCellAccessoryDisclosureIndicator"}````
 
-###Height
+### Height
 ````{"height":30,}````
 Default is 44
 
-##Notes
+## Notes
 You can override any of the methods in JSWSimpleJSONTable by calling it from your delegate.
